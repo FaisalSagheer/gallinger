@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section id="home" className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-amber-50 to-stone-50">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-8rem)]">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif text-stone-900 leading-tight">
@@ -35,7 +35,7 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[3/4] bg-gradient-to-br from-amber-200 to-stone-300 rounded-2xl shadow-2xl overflow-hidden">
+            <div className="bg-gradient-to-br from-amber-200 to-stone-300 rounded-2xl shadow-2xl overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center space-y-4 p-8">
                   <div className="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center shadow-lg">
