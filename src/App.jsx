@@ -8,9 +8,10 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
+    const [activeSection, setActiveSection] = useState('home');
   return (
     <div className="min-h-screen bg-stone-50">
-      <Header/>
+      <Header activeSection={activeSection} setActiveSection={setActiveSection}/>
       <Hero/>
       <About />
       <Books />
