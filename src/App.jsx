@@ -1,25 +1,16 @@
-import React from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Books from './components/Books'
-import Gallery from './components/Gallery'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import React from "react";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
 
 function App() {
-    const [activeSection, setActiveSection] = useState('home');
   return (
     <div className="min-h-screen bg-stone-50">
-      <Header activeSection={activeSection} setActiveSection={setActiveSection}/>
-      <Hero/>
-      <About />
-      <Books />
-      <Gallery />
-      <Contact />
-      <Footer />
+      <Navbar />
+      <Hero />
+      <About/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

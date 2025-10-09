@@ -1,7 +1,8 @@
 import { BookOpen, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-export default function Header({ activeSection, setActiveSection }) {
+
+export default function Navbar({ activeSection,setActiveSection}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId) => {
@@ -50,16 +51,13 @@ export default function Header({ activeSection, setActiveSection }) {
                 }`}
               >
                 {item.label}
-                {activeSection === item.id && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-amber-700 rounded-full" />
-                )}
               </button>
             ))}
           </nav>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-stone-700 hover:text-stone-900 transition-colors"
+            className="md:hidden p-2 text-stone-700 hover:text-stone-900 transition-all"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
