@@ -1,17 +1,11 @@
+'use client'
 import React from 'react'
 
 import { Image, Heart } from 'lucide-react';
+import { books, galleryItems } from '@/constant';
+import AuthorGalleryCard from './AuthorGalleryCard';
+
 function AuthorsGallery() {
-   const galleryItems = [
-    { src: "@/../public/assets/1950.jpg", year: "1950" },
-    { src: "@/../public/assets/1980.jpg", year: "1980" },
-    { src: "@/../public/assets/manwithhorse.png", year: "", title: "" },
-    { src: "@/../public/assets/1990.jpg", year: "1990", title: "Otie, OT, Old Truck" },
-    { src: "@/../public/assets/nina.png", year: "", title: "Nina" },
-    { src: "@/../public/assets/3510.jpg", year: "3510", title: "" },
-    { src: "@/../public/assets/4210.jpg", year: "4210", title: "" },
-    { src: "@/../public/assets/mertel.jpg", year: "2015", title: "" },
-  ];
 
 
   return (
@@ -28,27 +22,8 @@ function AuthorsGallery() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {galleryItems.map((item, index) => (
-            <div
-              key={index}
-              className="group relative from-amber-100 to-stone-200 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all"
-            >
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                <Image className="w-16 h-16 text-stone-400 mb-4 group-hover:scale-110 transition-transform" />
-                {item.year && (
-                  <span className="text-3xl font-serif text-stone-700 mb-2">
-                    {item.year}
-                  </span>
-                )}
-                {item.title && (
-                  <h3 className="text-lg font-semibold text-stone-900">{item.title}</h3>
-                )}
-                {item.description && (
-                  <p className="text-sm text-stone-600 mt-2">{item.description}</p>
-                )}
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
+          {galleryItems.map((book, index) => ( 
+            <AuthorGalleryCard data={book} key={index}/>
           ))}
         </div>
 
@@ -63,7 +38,7 @@ function AuthorsGallery() {
         </div>
       </div>
     </section>
- 
+
   )
 }
 
